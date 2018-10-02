@@ -1,0 +1,32 @@
+Balance has changed significantly!
+Balance has changed significantly!
+Balance has changed significantly!
+Balance has not changed significantlyDate: on Sep 17 04:16:49 2018
+
+Value: 533.960479045
+Address: PubkeyHashAddress(1Jekm8ZswQmDhLFMp9cuYb1Kcq26...
+
+
+Significant transaction detected
+Date: Tue Sep 25 13:55:33 2018
+Value: 1615.87162992
+Address: ScriptHashAddress(3BMEXqGpG4FxBA1KWhRFufXfSTRg...
+
+
+Significant transaction detected
+Date: Tue Sep 25 13:55:33 2018
+Value: 1615.87162992
+Address: ScriptHashAddress(3BMEXqGpG4FxBA1KWhRFufXfSTRg...
+
+
+Biggest transaction in the last week
+Date: Tue Sep 25 13:55:33 2018
+Value: 1615.87162992
+Address: ScriptHashAddress(3BMEXqGpG4FxBA1KWhRFufXfSTRg...
+
+
+Biggest transaction in the last week
+Date: Tue Sep 25 13:55:33 2018
+Value: 1615.87162992
+Address: ScriptHashAddress(3BMEXqGpG4FxBA1KWhRFufXfSTRg...
+

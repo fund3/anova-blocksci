@@ -1,9 +1,20 @@
-"""
-Simple Util class to send a slack message notification.
-"""
+# When this script is run, it will check the difference in crypto wallet balances between two dates
+# and if the difference in balance is significant, it will send a notification to the FUND3 slack channel
+
+
+
+import sys
+sys.path.append("../../")
 from slackclient import SlackClient
 import json
 from pprint import pprint
+from services.transactions import get_top_transactions
+import datetime
+
+"""
+Simple Util class to send a slack message notification.
+"""
+
 
 class SlackUtil:
     """
@@ -47,9 +58,12 @@ class SlackUtil:
             username=botname
         )
        
-        
 
-# CALLING STARTS BELOW
+    
+
+# -----------  RETRIEVING TRANSACTION INFORMATION ----------------
+
+value_threshold = 1500
 
 # Importing authentication token 
 with open("../../services/token.json") as datafile:
@@ -59,19 +73,52 @@ auth_token = data['token']
 # Initialising the class
 slack_util = SlackUtil(auth_token)
 
-balanceChanged = True
+# retrieving top transactions from the last week
 
-# Post to slack only if balance has changed significantly
-if balanceChanged:
+d = datetime.date.today()
+
+currentObj = d - datetime.timedelta(days=0)
+latest_date = currentObj.strftime('%Y-%-m-%d')
+
+weekAgoObj = d - datetime.timedelta(days=7)
+week_ago = weekAgoObj.strftime('%Y-%-m-%d')
+
+s = get_top_transactions(week_ago, latest_date)
+
+# Finding the highest value transaction and its corresponding address
+max_value = s['Value'].max()
+max_address = s[s['Value'] == s['Value'].max()]['Address']
+address_str = str(max_address).split()[1]
+max_date = s[s['Value'] == s['Value'].max()]['Date']
+date_str = str(max_date)[6:30]
+
+
+
+# -----------   POSTING TO SLACK  -----------------------
+
+# Post to slack only if transaction is big enough
+if max_value > value_threshold:
     
-    slack_util.send_message('anova-blocksci', 'Test message.', 'Zarif_bot')
-    file = open('testfile.txt', 'w') 
-    file.write('Balance has changed!')
+    slack_util.send_message('anova-blocksci', 'Biggest transaction in the last week', 'Zarif_bot')
+    slack_util.send_message('anova-blocksci', 'Date: ' + date_str, 'Zarif_bot')
+    slack_util.send_message('anova-blocksci', 'Value: ' + str(max_value), 'Zarif_bot')
+    slack_util.send_message('anova-blocksci', 'Address: ' + address_str, 'Zarif_bot')
+    file = open('logfile.txt', 'a') 
+    file.write('\n' + 'Biggest transaction in the last week\n')
+    file.write('Date: ' + date_str + '\n')
+    file.write('Value: ' + str(max_value) + '\n')
+    file.write('Address: ' + address_str + '\n')
+    file.write("\n")
+    
     
 else:
     
-    file = open('testfile.txt', 'w') 
-    file.write('Balance has not changed') 
+    file = open('logfile.txt', 'a') 
+    file.write('\n' + 'Balance has not changed significantly'+ '\n') 
+    file.write('Date: ' + date_str + '\n')
+    file.write('Value: ' + str(max_value) + '\n')
+    file.write('Address: ' + address_str + '\n')
+    file.write("\n")
     
 file.close() 
 
