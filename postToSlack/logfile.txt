@@ -30,3 +30,59 @@ Date: Tue Sep 25 13:55:33 2018
 Value: 1615.87162992
 Address: ScriptHashAddress(3BMEXqGpG4FxBA1KWhRFufXfSTRg...
 
+
+Biggest transaction in the last week
+Date: ed Sep 26 13:15:04 2018
+
+Value: 1605.87152992
+Address: ScriptHashAddress(3BMEXqGpG4FxBA1KWhRFufXfSTRg..)
+
+
+Biggest transaction in the last week
+Date: hu Sep 27 13:33:19 2018
+
+Value: 1515.87142992
+Address: ScriptHashAddress(3BMEXqGpG4FxBA1KWhRFufXfSTRg..)
+
+
+Balance has not changed significantly
+Date: ([], Name: Date, dtype: 
+Value: nan
+Address: Name)
+
+
+Balance has not changed significantly
+Date: ([], Name: Date, dtype: 
+Value: nan
+Address: Name)
+
+
+Balance has not changed significantly
+Date: ([], Name: Date, dtype: 
+Value: nan
+Address: Name)
+
+
+Balance has not changed significantly
+Date: ([], Name: Date, dtype: 
+Value: nan
+Address: Name)
+
+
+Balance has not changed significantly
+Date: ([], Name: Date, dtype: 
+Value: nan
+Address: Name)
+
+
+Balance has not changed significantly
+Date: ([], Name: Date, dtype: 
+Value: nan
+Address: Name)
+
+
+Balance has not changed significantly
+Date: ([], Name: Date, dtype: 
+Value: nan
+Address: Name)
+
