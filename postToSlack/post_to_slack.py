@@ -1,16 +1,17 @@
+"""
+When this script is run, it will check the difference in crypto wallet balances between two
+# dates and if the difference in balance is significant, it will send a notification to the
+# FUND3 slack channel
+"""
 
 import datetime
 import sys
 import json
-sys.path.append("../../")
-from services.transactions import get_top_transactions
+
 from slackclient import SlackClient
+from services.transactions import get_top_transactions
 
-
-
-# When this script is run, it will check the difference in crypto wallet balances between two
-# dates and if the difference in balance is significant, it will send a notification to the
-# FUND3 slack channel
+sys.path.append("../../")
 
 
 """
@@ -48,8 +49,8 @@ class SlackUtil:
         :param botname: str, name of the bot that sends the message.
         :return:
         """
-        channel = '#' + channel
-        
+        channel = '#'+channel
+
         # is response an unused variable name ?
         response = self.client.api_call(
             "chat.postMessage",
@@ -105,7 +106,8 @@ if max_value > VALUE_THRESHOLD:
     slack_util.send_message('anova-blocksci', 'Value: ' + str(max_value), 'Zarif_bot')
     slack_util.send_message('anova-blocksci', 'Address: ' + address_str, 'Zarif_bot')
     FILE = open('logfile.txt', 'a')
-    FILE.write('\n' + 'Biggest transaction in the last week\n')
+    FILE.write('CURRENT DATE: ' + latest_date + '\n')
+    FILE.write('Biggest transaction in the last week\n')
     FILE.write('Date: ' + date_str + '\n')
     FILE.write('Value: ' + str(max_value) + '\n')
     FILE.write('Address: ' + address_str + '\n')
@@ -115,7 +117,8 @@ if max_value > VALUE_THRESHOLD:
 else:
 
     FILE = open('logfile.txt', 'a')
-    FILE.write('\n' + 'Balance has not changed significantly'+ '\n')
+    FILE.write('CURRENT DATE: ' + latest_date + '\n')
+    FILE.write('Balance has not changed significantly'+ '\n')
     FILE.write('Date: ' + date_str + '\n')
     FILE.write('Value: ' + str(max_value) + '\n')
     FILE.write('Address: ' + address_str + '\n')

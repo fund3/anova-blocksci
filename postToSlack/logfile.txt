@@ -86,3 +86,10 @@ Date: ([], Name: Date, dtype:
 Value: nan
 Address: Name)
 
+CURRENT DATE: 2018-10-09
+
+Balance has not changed significantly
+Date: ([], Name: Date, dtype: 
+Value: nan
+Address: Name)
+
