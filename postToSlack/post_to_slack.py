@@ -1,4 +1,6 @@
 """
+    post_to_slack.py
+
 When this script is run, it will check the difference in crypto wallet balances between two
 # dates and if the difference in balance is significant, it will send a notification to the
 # FUND3 slack channel
@@ -7,12 +9,21 @@ When this script is run, it will check the difference in crypto wallet balances 
 import datetime
 import sys
 import json
+import blocksci
+import numpy as np
+import pandas as pd
+
+# sys.path.append("..")
+sys.path.append("../../")
 
 from slackclient import SlackClient
 from services.transactions import get_top_transactions
 
-sys.path.append("../../")
 
+
+
+class failedPost(Exception):
+    pass
 
 """
 Simple Util class to send a slack message notification.

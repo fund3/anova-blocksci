@@ -93,3 +93,81 @@ Date: ([], Name: Date, dtype:
 Value: nan
 Address: Name)
 
+CURRENT DATE: 2018-10-21
+Balance has not changed significantly
+Date: ([], Name: Date, dtype: 
+Value: nan
+Address: Name)
+
+CURRENT DATE: 2018-10-21
+Balance has not changed significantly
+Date: ([], Name: Date, dtype: 
+Value: nan
+Address: Name)
+
+CURRENT DATE: 2018-10-21
+Balance has not changed significantly
+Date: ([], Name: Date, dtype: 
+Value: nan
+Address: Name)
+
+CURRENT DATE: 2018-10-21
+Balance has not changed significantly
+Date: ([], Name: Date, dtype: 
+Value: nan
+Address: Name)
+
+CURRENT DATE: 2018-10-21
+Balance has not changed significantly
+Date: ([], Name: Date, dtype: 
+Value: nan
+Address: Name)
+
+CURRENT DATE: 2018-10-21
+Balance has not changed significantly
+Date: ([], Name: Date, dtype: 
+Value: nan
+Address: Name)
+
+CURRENT DATE: 2018-10-21
+Balance has not changed significantly
+Date: ([], Name: Date, dtype: 
+Value: nan
+Address: Name)
+
+CURRENT DATE: 2018-10-21
+Balance has not changed significantly
+Date: ([], Name: Date, dtype: 
+Value: nan
+Address: Name)
+
+CURRENT DATE: 2018-10-21
+Balance has not changed significantly
+Date: ([], Name: Date, dtype: 
+Value: nan
+Address: Name)
+
+CURRENT DATE: 2018-10-21
+Balance has not changed significantly
+Date: ([], Name: Date, dtype: 
+Value: nan
+Address: Name)
+
+CURRENT DATE: 2018-10-21
+Balance has not changed significantly
+Date: ([], Name: Date, dtype: 
+Value: nan
+Address: Name)
+
+CURRENT DATE: 2018-10-22
+Balance has not changed significantly
+Date: ([], Name: Date, dtype: 
+Value: nan
+Address: Name)
+
+CURRENT DATE: 2018-10-23
+Balance has not changed significantly
+Date: ([], Name: Date, dtype: 
+Value: nan
+Address: Name)
+

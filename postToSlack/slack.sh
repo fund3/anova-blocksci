@@ -7,7 +7,7 @@
 
 cd /home/ubuntu/BlockSci/Notebooks/Zarif/postToSlack
 
-python3 postToSlack.py
+python3 post_to_slack.py
 echo The slack.sh file is running
 
 
@@ -15,4 +15,5 @@ echo The slack.sh file is running
 
 # The command below worked - to copy this file into cron.daily
 
-# sudo cp /home/ubuntu/BlockSci/Notebooks/Zarif/postToSlack/slack.sh /etc/cron.daily/slack.sh
+# sudo cp /home/ubuntu/BlockSci/Notebooks/Zarif/postToSlack/slack.sh /etc/cron.daily/slack.shls
+cd
