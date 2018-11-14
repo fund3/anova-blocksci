@@ -13,6 +13,8 @@ import blocksci
 import numpy as np
 import pandas as pd
 
+pd.set_option('display.max_colwidth', -1)
+
 # sys.path.append("..")
 sys.path.append("../../")
 
@@ -99,40 +101,55 @@ s = get_top_transactions(week_ago, latest_date)
 
 # Finding the highest value transaction and its corresponding address
 max_value = s['Value'].max()
-max_address = s[s['Value'] == s['Value'].max()]['Address']
+max_address = s[s['Value'] == s['Value'].max()]['Output Address']
 
 address_str = str(max_address).split()[1][:-1]+')'
 
 max_date = s[s['Value'] == s['Value'].max()]['Date']
 date_str = str(max_date)[6:30]
 
-
+count_spam = 0
 
 # -----------   POSTING TO SLACK  -----------------------
 
-# Post to slack only if transaction is big enough
-if max_value > VALUE_THRESHOLD:
-    slack_util.send_message('anova-blocksci', 'Biggest transaction in the last week', 'Zarif_bot')
-    slack_util.send_message('anova-blocksci', 'Date: ' + date_str, 'Zarif_bot')
-    slack_util.send_message('anova-blocksci', 'Value: ' + str(max_value), 'Zarif_bot')
-    slack_util.send_message('anova-blocksci', 'Address: ' + address_str, 'Zarif_bot')
-    FILE = open('logfile.txt', 'a')
-    FILE.write('CURRENT DATE: ' + latest_date + '\n')
-    FILE.write('Biggest transaction in the last week\n')
-    FILE.write('Date: ' + date_str + '\n')
-    FILE.write('Value: ' + str(max_value) + '\n')
-    FILE.write('Address: ' + address_str + '\n')
-    FILE.write("\n")
+#slack_util.send_message('anova-blocksci', 'Number of spam transactions: ' + str(count_spam), 'Zarif_bot')
+    
+# Only posting if we receive top transactions. If there are no top transactions
+# 'max_value' will be Nan
+if isinstance(max_value, float):
+    
+    # Post to slack only if transaction is big enough
+    if max_value > VALUE_THRESHOLD:
 
+        slack_util.send_message('anova-blocksci', 'Biggest transaction in the last week', 'Zarif_bot')
+        slack_util.send_message('anova-blocksci', 'Date: ' + date_str, 'Zarif_bot')
+        slack_util.send_message('anova-blocksci', 'Value: ' + str(max_value), 'Zarif_bot')
+        slack_util.send_message('anova-blocksci', 'Address: ' + address_str, 'Zarif_bot')
+        FILE = open('logfile.txt', 'a')
+        FILE.write('CURRENT DATE: ' + latest_date + '\n')
+        FILE.write('Biggest transaction in the last week\n')
+        FILE.write('Date: ' + date_str + '\n')
+        FILE.write('Value: ' + str(max_value) + '\n')
+        FILE.write('Address: ' + address_str + '\n')
+        FILE.write("\n")
+
+    else:
+
+        FILE = open('logfile.txt', 'a')
+        FILE.write('CURRENT DATE: ' + latest_date + '\n')
+        FILE.write('Balance has not changed significantly'+ '\n')
+        FILE.write('Date: ' + date_str + '\n')
+        FILE.write('Value: ' + str(max_value) + '\n')
+        FILE.write('Address: ' + address_str + '\n')
+        FILE.write("\n")
+
+    FILE.close()
 
 else:
-
+    
     FILE = open('logfile.txt', 'a')
     FILE.write('CURRENT DATE: ' + latest_date + '\n')
-    FILE.write('Balance has not changed significantly'+ '\n')
-    FILE.write('Date: ' + date_str + '\n')
-    FILE.write('Value: ' + str(max_value) + '\n')
-    FILE.write('Address: ' + address_str + '\n')
+    FILE.write('No top transactions detected'+ '\n')
     FILE.write("\n")
-
-FILE.close()
+        
+    FILE.close()

@@ -171,3 +171,101 @@ Date: ([], Name: Date, dtype:
 Value: nan
 Address: Name)
 
+CURRENT DATE: 2018-10-23
+Biggest transaction in the last week
+Date: at Oct 20 08:42:17 2018
+
+Value: 3888.8
+Address: ScriptHashAddress(34xp4vRoCGJym3xR7yCVPFHoCNxv4Twseo)
+
+CURRENT DATE: 2018-10-24
+Biggest transaction in the last week
+Date: at Oct 20 08:42:17 2018
+
+Value: 3888.8
+Address: ScriptHashAddress(34xp4vRoCGJym3xR7yCVPFHoCNxv4Twseo)
+
+CURRENT DATE: 2018-10-25
+Biggest transaction in the last week
+Date: at Oct 20 08:42:17 2018
+
+Value: 3888.8
+Address: ScriptHashAddress(34xp4vRoCGJym3xR7yCVPFHoCNxv4Twseo)
+
+CURRENT DATE: 2018-10-26
+Biggest transaction in the last week
+Date: at Oct 20 08:42:17 2018
+
+Value: 3888.8
+Address: ScriptHashAddress(34xp4vRoCGJym3xR7yCVPFHoCNxv4Twseo)
+
+CURRENT DATE: 2018-10-27
+Biggest transaction in the last week
+Date: at Oct 20 08:42:17 2018
+
+Value: 3888.8
+Address: ScriptHashAddress(34xp4vRoCGJym3xR7yCVPFHoCNxv4Twseo)
+
+CURRENT DATE: 2018-10-28
+Biggest transaction in the last week
+Date: ri Oct 26 06:05:33 2018
+
+Value: 3401.00100491
+Address: PubkeyHashAddress(1Fc4QQu6nEc4snAe4HAb4Kryd8koH89pYk)
+
+CURRENT DATE: 2018-10-29
+Biggest transaction in the last week
+Date: ri Oct 26 06:05:33 2018
+
+Value: 3401.00100491
+Address: PubkeyHashAddress(1Fc4QQu6nEc4snAe4HAb4Kryd8koH89pYk)
+
+CURRENT DATE: 2018-10-30
+Biggest transaction in the last week
+Date: ri Oct 26 06:05:33 2018
+
+Value: 3401.00100491
+Address: PubkeyHashAddress(1Fc4QQu6nEc4snAe4HAb4Kryd8koH89pYk)
+
+CURRENT DATE: 2018-10-31
+Biggest transaction in the last week
+Date: ri Oct 26 06:05:33 2018
+
+Value: 3401.00100491
+Address: PubkeyHashAddress(1Fc4QQu6nEc4snAe4HAb4Kryd8koH89pYk)
+
+CURRENT DATE: 2018-11-01
+Biggest transaction in the last week
+Date: ri Oct 26 06:05:33 2018
+
+Value: 3401.00100491
+Address: PubkeyHashAddress(1Fc4QQu6nEc4snAe4HAb4Kryd8koH89pYk)
+
+CURRENT DATE: 2018-11-02
+Biggest transaction in the last week
+Date: ri Oct 26 06:05:33 2018
+
+Value: 3401.00100491
+Address: PubkeyHashAddress(1Fc4QQu6nEc4snAe4HAb4Kryd8koH89pYk)
+
+CURRENT DATE: 2018-11-03
+Biggest transaction in the last week
+Date: un Oct 28 17:11:08 2018
+
+Value: 2899.91691178
+Address: ScriptHashAddress(3Q6CM4GCYS2BhCDyojK8Axgt2tC6RFSzHW)
+
+CURRENT DATE: 2018-11-04
+Biggest transaction in the last week
+Date: un Oct 28 17:11:08 2018
+
+Value: 2899.91691178
+Address: ScriptHashAddress(3Q6CM4GCYS2BhCDyojK8Axgt2tC6RFSzHW)
+
+CURRENT DATE: 2018-11-05
+Biggest transaction in the last week
+Date: on Oct 29 15:59:30 2018
+
+Value: 2199.91690739
+Address: ScriptHashAddress(3Kro2DNfYdkMTrzKkUS39DFa3aB3sAp3KQ)
+
