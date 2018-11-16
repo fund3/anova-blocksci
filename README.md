@@ -1,4 +1,4 @@
-# anova-blocksci
+# Crypto notifications on your Slack channel
 
 This is a service that notifies significant changes in cryptocurrency transactions and spam transactions,
 with the notifications being sent as Slack messages to a specific channel #anova-blocksci
