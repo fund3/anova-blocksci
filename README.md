@@ -11,9 +11,9 @@ Python3, pandas, numpy, blocksci, json, datetime
 
 All the important files are in the /postToSlack folder, and they are as follows:
 
-post_to_slack.py
-slack.sh
-logfile.txt
+- post_to_slack.py
+- slack.sh
+- logfile.txt
 
 # How it works:
 
